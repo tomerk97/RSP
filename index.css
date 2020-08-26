@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+
+*:focus{
+	outline: 0;
+}
+html{
+	background-image: url(background.png); 
+	background-size: cover;
+	font-family: Questrial;
+}
+@keyframes fadeIn{
+	0%{
+		opacity: 10%;
+	}
+	100%{
+		opacity: 100%;
+	}
+}
+@keyframes changeColor{
+	0%{
+		background:royalblue;
+	}
+	50%{
+		background: cornflowerblue;
+	}
+	100%{
+		background:royalblue;
+	}
+}
+
+#container{
+	width: 32em;
+	margin-top: -5em;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-left: 29%;
+	grid-gap: 0em;
+}
+
+p{
+	/*animation-name: fadeIn;
+	animation-iteration-count: 1;
+	animation-duration: 1s;*/
+	text-align: center;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	font-size: 2em;
+}
+#welcome{
+	font-size: 2.5em;
+}
+
+.rulesimg{
+	width: 5em;
+	justify-self: center;
+}
+h1{
+	text-align: center;
+}
+#start{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	padding: 1em 2em;
+	background: royalblue;
+	cursor: pointer;
+	font-weight: 800;
+	border:3px solid antiquewhite;
+	border-radius: 20px;
+	animation-name: changeColor;
+	animation-iteration-count: infinite;
+	animation-duration: 1.5s;
+}
+
+#start:active{
+	animation:none;
+	background-color: floralwhite;
+	transition: all 0.09s ease;
+}
+
+#logo{
+	width:10em;
+}
